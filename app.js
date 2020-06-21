@@ -99,9 +99,11 @@ function task21_15() {
     }
 }
 function task21_16() {
-    var university = "University of Karachi";
-    var spl = university.split([])
-    document.write(spl)
+    var str = "University of Karachi";
+    var res = str.split("");
+    for (var i = 0; i <= res.length-1; i++) {
+        document.write(res[i] + "<br>");
+    }
 }
 function task21_17() {
     var input = "Pakistan"
@@ -236,63 +238,67 @@ function task31_6() {
     var msDiff = msToday - msDoomsday;
     var dDiff = msDiff / (1000 * 60 * 60 * 24 * 30 * 12);
     dDiff = Math.floor(dDiff);
-   var msDiff= new Date("July 4, 2011").getTime() -new Date().getTime();
-    document.write("Current Date" + today + "<br>"+ "Elapsed miliseconds since July 4,2011 "+ msDiff )
+    var msDiff = new Date("July 4, 2011").getTime() - new Date().getTime();
+    document.write("Current Date" + today + "<br>" + "Elapsed miliseconds since July 4,2011 " + msDiff)
 }
-function task31_7() {;
+function task31_7() {
+
     var today = new Date();
     var currentHrs = today.getHours();
-    
-if (currentHrs === 0-11 ){
-    alert (currentHrs + " Its AM")
+
+    if (currentHrs === 0 - 11) {
+        alert(currentHrs + " Its AM")
+    }
+    else { alert(currentHrs + " Its PM") }
 }
-else { alert (currentHrs +" Its PM")}
-}
-function task31_8() {;
+function task31_8() {
     var laterdate = new Date("December 31, 2020");
-    document.write(" Later Date: "+ laterdate)
+    document.write(" Later Date: " + laterdate)
 }
-function task31_9() {;
-    var today=new Date();
+function task31_9() {
+
+    var today = new Date();
     var past = new Date("April 25, 2020");
     var msToday = today.getTime();
-   var mspast = past.getTime();
-    var diff=  msToday -mspast
+    var mspast = past.getTime();
+    var diff = msToday - mspast
     var dDiff = diff / (1000 * 60 * 60 * 24);
     dDiff = Math.floor(dDiff);
     document.write(dDiff + " days have passed since 1st Ramadan of 2020")
 }
-function task31_10() {;
-    var today=new Date();
+function task31_10() {
+
+    var today = new Date();
     var past = new Date("Jannuary 1, 2020");
     var msToday = today.getTime();
-   var mspast = past.getTime();
-    var diff=  msToday -mspast
-    var dDiff = diff / (1000 * 60 );
+    var mspast = past.getTime();
+    var diff = msToday - mspast
+    var dDiff = diff / (1000 * 60);
     dDiff = Math.floor(dDiff);
-    document.write(today + "<br>"+ dDiff + " seconnds had passed since  begining of 2020")
+    document.write(today + "<br>" + dDiff + " seconnds had passed since  begining of 2020")
 }
-function task31_11() {;
-    var today=new Date();
-    var hrs= today.getHours();
+function task31_11() {
+    var today = new Date();
+    var hrs = today.getHours();
 
-    document.write("Current date: " + today+ "<br>")
+    document.write("Current date: " + today + "<br>")
 }
-function task31_12() {;
-    var today=new Date();
-    var hrs= today.getHours();
-    alert ("Current date: " + today+ "<br>")
+function task31_12() {
+    var today = new Date();
+    var hrs = today.getHours();
+    alert("Current date: " + today + "<br>")
 }
-function task31_13() {;
-    var user=prompt ("whats your age?")
-    var today=new Date();
-    var year= today.getFullYear();
-    var diff=  year - user ;
-    document.write( "Your age is " + user + "<br>"+ "Your Birth year is " +  diff)
+function task31_13() {
+
+    var user = prompt("whats your age?")
+    var today = new Date();
+    var year = today.getFullYear();
+    var diff = year - user;
+    document.write("Your age is " + user + "<br>" + "Your Birth year is " + diff)
 }
-function task31_14() {;
-    var name=("Customer Name: ABC")
-    var today=new Date();
+function task31_14() {
+    var name = ("Customer Name: ABC")
+    var today = new Date();
     var month = new Array();
     month[0] = "January";
     month[1] = "February";
@@ -306,19 +312,19 @@ function task31_14() {;
     month[9] = "October";
     month[10] = "November";
     month[11] = "December";
-    var mm= month[today.getMonth()];
-    var unit= 410;
-    var charge=16;
-    var amount= unit * charge
-    var late= 350
-    var gross= amount +  late
-    document.write("<h1> K-Electric Bill </h1>" + "<br>"+ name + "<br>"+"Month :"+ mm + "<br>" + " Number of units:  " + unit +"<br>"+ "Charges per unit" + charge + "<br>"+ "Net Amount Payable (within Due Date)" 
-    + amount + "<br>" + "Late Payment Surcharge:  " + late + "<br>"+ "Gross Amount Payable (after Due Date) "+ gross ) 
+    var mm = month[today.getMonth()];
+    var unit = 410;
+    var charge = 16;
+    var amount = unit * charge
+    var late = 350
+    var gross = amount + late
+    document.write("<h1> K-Electric Bill </h1>" + "<br>" + name + "<br>" + "Month :" + mm + "<br>" + " Number of units:  " + unit + "<br>" + "Charges per unit" + charge + "<br>" + "Net Amount Payable (within Due Date)"
+        + amount + "<br>" + "Late Payment Surcharge:  " + late + "<br>" + "Gross Amount Payable (after Due Date) " + gross)
 }
 
-function task34_1(){
-    var today= new Date();
-    alert (today)
+function task34_1() {
+    var today = new Date();
+    alert(today)
 }
 // function task34_2(){
 // function greeting(greet){
@@ -333,3 +339,98 @@ function task34_1(){
 //     var greeting= ("Hi! "+ full )
 //     {alert (greeting)}}
 
+function task34_4() {
+    function add(num1, opr, num2) {
+        alert(num1 + num2)
+    }
+
+    add(5, 0, 1);
+}
+
+function task34_5() {
+    function square(number) {
+        alert(number * number);
+    }
+    square(5);
+}
+
+function task34_6() {
+    function calcFact(num) {
+        if (num == 1) {
+            document.write(num);
+        }
+        else {
+            document.write(num * calcFact(num - 1));
+        }
+    }
+}
+
+function task34_7(i) {
+    var a = prompt("input starting nummber")
+    var b = prompt("input ending nummber")
+    {
+        for (var i = a; i < b.length; i++);
+        document.write(i);
+    }
+
+}
+function task34_9() {
+    function area(width, height) {
+        var height = 7;
+        alert(width * height)
+    }
+    area(5);
+}
+function task34_10() {
+    function palin(word) {
+        var pal = "";
+        for (var i = word.length - 1; i >= 0; i--) {
+            pal = pal + word[i];
+        }
+        if (word === pal) {
+            document.write("This is a Palindrome");
+        }
+        else {
+            document.write("This is not palindrome");
+        }
+
+    } palin("madam")
+}
+function task34_11() {
+    function titleCase(str = "") {
+        str = str[0].toUpperCase() + str.slice(1, str.length).toLowerCase();
+        for (var i = 0; i < str.length; i++) {
+            if (str[i] === " ") {
+                str = str.slice(0, i + 1) + str[i + 1].toUpperCase() + str.slice(i + 2, str.length)
+            }
+
+            document.write(str[i]);
+        }
+    }
+    titleCase("the quick brown fox");
+}
+function task34_12() {
+    function findLongestWord(str) {
+        var arr = str.split(" ");
+        var ans = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            var j = arr[i - 1]
+            if (arr[i].length > j.length) {
+                ans = arr[i];
+            }
+        }
+        document.write(ans);
+    }
+
+    findLongestWord("Web Development Tutorial")
+}
+
+function task34_13() {
+    function text(text, o) {
+        var text = "JSResourceS.com'"
+        document.write(text + "<br>")
+        var find = "o";
+        var doc = text.split(find).length - 0;
+        document.write("Occurence of o is: " + doc)
+    }
+}
